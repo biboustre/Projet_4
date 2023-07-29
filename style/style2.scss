@@ -1,3 +1,122 @@
-body{
-    background-color: red;
-}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    height: 100%;
+    font-family: roboto;
+  }
+  
+  :root {
+    --logo-color: black;
+    --num-color: #9356dc;
+    --location-color: #eaeaea;
+    --bg-accueil: #f6f6f6;
+    --bg-new: #99e2d0;
+    --bg-footer: #353535;
+    --bg-case:  #008766;
+    --icon-fonctionnement: #7E7E7E;
+  }
+
+
+
+  @mixin flexMid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flexColMid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flexColMid2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  @mixin lienBloc {
+    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+  }
+
+
+
+
+
+  header {
+    padding: 14px 89px 13px 89px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+  
+    .header-logo {
+      text-align: center;
+  
+      svg {
+        height: 36px;
+        width: 162px;
+      }
+    }
+  }
+
+
+
+  .image-principale{
+
+    img{
+        object-fit: cover;
+        width: 375px;
+        height: 275px;
+    }
+  }
+
+
+
+
+
+
+
+  /*footer {
+    padding: 22px 25px 22px 25px;
+    background-color: var(--bg-footer);
+  
+    .logo-footer > img {
+      width: 100px;
+      margin-bottom: 16px;
+    }
+  
+    .info-footer {
+      color: var(--bg-accueil);
+  
+      p{
+        margin-top: 8px;
+      }
+  
+      .p-num-1, .p-num-1 > p {
+        margin-top: 0;
+      }
+  
+      .p-num-1{
+        display: flex;
+        gap: 11px;
+      }
+  
+      .p-num-2{
+        display: flex;
+        align-items: end;
+        gap: 5px;
+      }
+    }
+  }*/

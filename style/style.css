@@ -62,12 +62,12 @@ header .header-logo svg {
   top: 16.5px;
   left: 147px;
 }
-.adresse .localisation i {
+.adresse .localisation .localisation i {
   margin-right: 17px;
   width: 12px;
   height: 16px;
 }
-.adresse p {
+.adresse .localisation p {
   line-height: 50px;
   font-size: 16px;
   font-weight: 500;
@@ -81,8 +81,7 @@ header .header-logo svg {
   align-items: center;
   background-color: var(--bg-accueil);
 }
-.accueil .title-accueil,
-.accueil p {
+.accueil .title-accueil, .accueil p {
   text-align: center;
 }
 .accueil h2 {
@@ -127,8 +126,7 @@ header .header-logo svg {
   margin-top: 48px;
   margin-bottom: 68px;
 }
-.fonctionnement .fonctionnement,
-.fonctionnement h1 {
+.fonctionnement .fonctionnement, .fonctionnement h1 {
   margin-left: 20px;
   margin-bottom: 30px;
 }
@@ -191,6 +189,27 @@ header .header-logo svg {
   border-radius: 15px;
   margin-bottom: 18px;
 }
+.select-restaurants .images-restaurants .images-restaurants > a > h2 {
+  font-size: 18px;
+  margin-left: 13px;
+  margin-top: 14px;
+}
+.select-restaurants .images-restaurants .images-restaurants > a > p {
+  font-size: 17px;
+  margin-left: 13px;
+  font-weight: 300;
+}
+.select-restaurants .images-restaurants .images-restaurants > a > .case {
+  position: absolute;
+  padding: 7px 9px 7px 9px;
+  background-color: var(--bg-new);
+  right: 12px;
+  top: 13px;
+  color: var(--bg-case);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 2px;
+}
 .select-restaurants .images-restaurants a {
   text-decoration: none;
   color: var(--logo-color);
@@ -210,27 +229,6 @@ header .header-logo svg {
   height: 21px;
   right: 25px;
   bottom: 33px;
-}
-.select-restaurants .images-restaurants > a > h2 {
-  font-size: 18px;
-  margin-left: 13px;
-  margin-top: 14px;
-}
-.select-restaurants .images-restaurants > a > p {
-  font-size: 17px;
-  margin-left: 13px;
-  font-weight: 300;
-}
-.select-restaurants .images-restaurants > a > .case {
-  position: absolute;
-  padding: 7px 9px 7px 9px;
-  background-color: var(--bg-new);
-  right: 12px;
-  top: 13px;
-  color: var(--bg-case);
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: 2px;
 }
 
 footer {
