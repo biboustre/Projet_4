@@ -247,6 +247,15 @@ footer .info-footer {
 footer .info-footer p {
   margin-top: 8px;
 }
-footer .info-footer .p-num-1 {
+footer .info-footer .p-num-1, footer .info-footer .p-num-1 > p {
   margin-top: 0;
+}
+footer .info-footer .p-num-1 {
+  display: flex;
+  gap: 11px;
+}
+footer .info-footer .p-num-2 {
+  display: flex;
+  align-items: end;
+  gap: 5px;
 }/*# sourceMappingURL=style.css.map */
