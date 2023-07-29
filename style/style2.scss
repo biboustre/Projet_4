@@ -139,6 +139,11 @@
               .blocs{
                 @include blocs-menu();
 
+                    .prix{
+                      display: flex;
+                      justify-content: space-between;
+                    }
+
 
                     h3{
                       font-weight: 500;
@@ -197,6 +202,10 @@
 
 
   footer {
+    top: 1460px;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
     padding: 22px 25px 22px 25px;
     background-color: var(--bg-footer);
   

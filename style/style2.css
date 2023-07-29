@@ -86,6 +86,10 @@ header .header-logo svg {
   border-radius: 15.043px;
   margin-top: 12px;
 }
+.carte-restaurant .cartes .blocs .prix {
+  display: flex;
+  justify-content: space-between;
+}
 .carte-restaurant .cartes .blocs h3 {
   font-weight: 500;
 }
@@ -126,6 +130,10 @@ header .header-logo svg {
 }
 
 footer {
+  top: 1460px;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
   padding: 22px 25px 22px 25px;
   background-color: var(--bg-footer);
 }
