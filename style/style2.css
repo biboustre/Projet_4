@@ -7,6 +7,7 @@
 body {
   height: 100%;
   font-family: roboto;
+  position: relative;
 }
 
 :root {
@@ -18,13 +19,12 @@ body {
   --bg-footer: #353535;
   --bg-case: #008766;
   --icon-fonctionnement: #7E7E7E;
+  --bg-blocs: white;
 }
 
 header {
   padding: 14px 89px 13px 89px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  position: relative;
-  z-index: 1;
 }
 header .header-logo {
   text-align: center;
@@ -34,42 +34,120 @@ header .header-logo svg {
   width: 162px;
 }
 
+.image-principale {
+  width: 100%;
+  height: 275px;
+}
 .image-principale img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 375px;
-  height: 275px;
+  height: 100%;
+  width: 100%;
 }
 
-/*footer {
+.carte-restaurant {
+  width: 100%;
+  background-color: var(--bg-accueil);
+  border-radius: 40px 40px 0 0;
+  position: absolute;
+  z-index: 1;
+  top: 300px;
+}
+.carte-restaurant .title-carte {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: shrikhand;
+  margin-bottom: 40px;
+  margin-left: 13px;
+  margin-top: 32px;
+}
+.carte-restaurant .cartes {
+  width: 349px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.carte-restaurant .cartes .line-and-title-carte {
+  width: 275px;
+}
+.carte-restaurant .cartes .line-and-title-carte .title-menu {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.carte-restaurant .cartes .line-and-title-carte hr {
+  width: 40px;
+  border: none;
+  height: 3px;
+  background-color: var(--bg-new);
+}
+.carte-restaurant .cartes .blocs {
+  padding: 15px;
+  background-color: var(--bg-blocs);
+  border-radius: 15.043px;
+  margin-top: 12px;
+}
+.carte-restaurant .cartes .blocs h3 {
+  font-weight: 500;
+}
+.carte-restaurant .cartes .blocs p {
+  font-size: 15.043px;
+  font-weight: 300;
+}
+
+.carte-plats .line-and-plat {
+  width: 275px;
+}
+.carte-plats .line-and-plat hr {
+  width: 40px;
+  border: none;
+  height: 3px;
+  background-color: var(--bg-new);
+}
+.carte-plats .line-and-plat .plat {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 40px;
+  width: 186px;
+  height: 50px;
+  border: solid 1px black;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+  border: none;
+  color: var(--bg-blocs);
+}
+
+footer {
   padding: 22px 25px 22px 25px;
   background-color: var(--bg-footer);
-
-  .logo-footer > img {
-    width: 100px;
-    margin-bottom: 16px;
-  }
-
-  .info-footer {
-    color: var(--bg-accueil);
-
-    p{
-      margin-top: 8px;
-    }
-
-    .p-num-1, .p-num-1 > p {
-      margin-top: 0;
-    }
-
-    .p-num-1{
-      display: flex;
-      gap: 11px;
-    }
-
-    .p-num-2{
-      display: flex;
-      align-items: end;
-      gap: 5px;
-    }
-  }
-}*//*# sourceMappingURL=style2.css.map */
+}
+footer .logo-footer > img {
+  width: 100px;
+  margin-bottom: 16px;
+}
+footer .info-footer {
+  color: var(--bg-accueil);
+}
+footer .info-footer p {
+  margin-top: 8px;
+}
+footer .info-footer .p-num-1, footer .info-footer .p-num-1 > p {
+  margin-top: 0;
+}
+footer .info-footer .p-num-1 {
+  display: flex;
+  gap: 11px;
+}
+footer .info-footer .p-num-2 {
+  display: flex;
+  align-items: end;
+  gap: 5px;
+}/*# sourceMappingURL=style2.css.map */
