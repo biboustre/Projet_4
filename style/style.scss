@@ -106,10 +106,10 @@ header {
 
     .localisation{
        @include flexMid();
-       top: 16.5px;
-       left: 147px;
+       //top: 16.5px;
+       //left: 147px;
 
-          .localisation i{
+          & i{
             margin-right: 17px;
             width: 12px;
             height: 16px;
@@ -249,19 +249,19 @@ header {
           border-radius: 15px;
           margin-bottom: 18px;
 
-                .images-restaurants > a > h2 {
+                & > a > h2 {
                   font-size: 18px;
                   margin-left: 13px;
                   margin-top: 14px;
                 }
               
-                .images-restaurants > a > p {
+                & > a > p {
                   font-size: 17px;
                   margin-left: 13px;
                   font-weight: 300;
                 }
               
-                .images-restaurants > a > .case{
+                & > a > .case{
                   position: absolute;
                   padding: 7px 9px 7px 9px;
                   background-color: var(--bg-new);
