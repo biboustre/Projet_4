@@ -90,6 +90,9 @@ header .header-logo svg {
   display: flex;
   justify-content: space-between;
 }
+.carte-restaurant .cartes .blocs .prix strong {
+  font-size: 15.043px;
+}
 .carte-restaurant .cartes .blocs h3 {
   font-weight: 500;
 }
@@ -130,7 +133,7 @@ header .header-logo svg {
 }
 
 footer {
-  top: 1460px;
+  top: 1450px;
   z-index: 2;
   position: absolute;
   width: 100%;
