@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    height: 100%;
+    font-family: roboto;
+    position: relative;
+  }
+  
+  :root {
+    --logo-color: black;
+    --num-color: #9356dc;
+    --location-color: #eaeaea;
+    --bg-accueil: #f6f6f6;
+    --bg-new: #99e2d0;
+    --bg-footer: #353535;
+    --bg-case:  #008766;
+    --icon-fonctionnement: #7E7E7E;
+    --bg-blocs: white;
+  }
+
+
+
+  @mixin flexMid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flexColMid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flexColMid2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  @mixin lienBloc {
+    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+  }
+
+
+ 
+
+  @mixin blocs-menu{
+    padding: 15px;
+    background-color: var(--bg-blocs);
+    border-radius: 15.043px;
+    margin-top: 12px;
+  }
+
+
+
+
+
+  header {
+    padding: 14px 89px 13px 89px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  
+        .header-logo {
+          text-align: center;
+        
+              svg {
+                height: 36px;
+                width: 162px;
+              }
+        }
+  }
+
+
+
+  .image-principale{
+    width: 100%;
+    height: 275px;
+
+          img{
+              object-fit: cover;
+              height: 100%;
+              width: 100%;
+          }
+  }
+
+
+
+  .carte-restaurant{
+    width: 100%;
+    background-color: var(--bg-accueil);
+    border-radius: 40px 40px 0 0;
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+
+      .title-carte{
+        font-size: 28px;
+        font-weight: 400;
+        font-family: shrikhand;
+        margin-bottom: 40px;
+        margin-left: 13px;
+        margin-top: 32px;
+      }
+
+      .cartes{
+        width: 349px;
+        margin: auto;
+        margin-bottom: 40px;
+
+
+              .line-and-title-carte{
+                width: 275px;
+              
+                    .title-menu{
+                      font-size: 16px;
+                      font-weight: 300;
+                      margin-bottom: 5px;
+                    } 
+                  
+                    hr{
+                      width: 40px;
+                      border: none;
+                      height: 3px;
+                      background-color: var(--bg-new);
+                    }
+              }
+
+              .blocs{
+                @include blocs-menu();
+
+                    .prix{
+                      display: flex;
+                      justify-content: space-between;
+
+                        strong{
+                          font-size: 15.043px;
+                        }
+                    }
+
+
+                    h3{
+                      font-weight: 500;
+                    }
+
+                    p{
+                      font-size: 15.043px;
+                      font-weight: 300;
+                    }
+              }
+      }  
+  }
+
+
+ 
+.carte-plats{
+
+
+            .line-and-plat{
+              width: 275px;
+
+              hr{
+                width: 40px;
+                border: none;
+                height: 3px;
+                background-color: var(--bg-new);
+              }
+            
+                  .plat{
+                    font-size: 16px;
+                    font-weight: 300;
+                    margin-bottom: 5px;
+                  } 
+            }
+    }
+
+    .btn{
+      @include flexMid();
+      margin: auto;
+      margin-bottom: 40px;
+      width: 186px;
+      height: 50px;
+      border: solid 1px black;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 25px;
+      background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+      border: none;
+      color: var(--bg-blocs);
+    }
+
+
+
+
+
+
+
+
+  footer {
+    top: 1534px;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    padding: 22px 25px 22px 25px;
+    background-color: var(--bg-footer);
+  
+    .logo-footer > img {
+      width: 100px;
+      margin-bottom: 16px;
+    }
+  
+    .info-footer {
+      color: var(--bg-accueil);
+  
+      p{
+        margin-top: 8px;
+      }
+  
+      .p-num-1, .p-num-1 > p {
+        margin-top: 0;
+      }
+  
+      .p-num-1{
+        display: flex;
+        gap: 11px;
+      }
+  
+      .p-num-2{
+        display: flex;
+        align-items: end;
+        gap: 5px;
+      }
+    }
+  }
