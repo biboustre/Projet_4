@@ -27,13 +27,28 @@ body {
 
 
 
-@mixin flexMid {
+
+.fa-regular{
+  color: var(--logo-color);
+}
+
+.fa-mobile-screen-button, .fa-list-ul {
+  color: var(--icon-fonctionnement);
+}
+
+.fa-store{
+  color: var(--num-color);
+}
+
+
+
+@mixin flexMid{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@mixin flexColMid {
+@mixin flexColMid{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,22 +71,12 @@ body {
   text-decoration: none;
 }
 
-
-
-
-.fa-regular{
-  color: var(--logo-color);
+@mixin blocs-menu{
+  padding: 15px;
+  background-color: var(--bg-blocs);
+  border-radius: 15.043px;
+  margin-top: 12px;
 }
-
-.fa-mobile-screen-button, .fa-list-ul {
-  color: var(--icon-fonctionnement);
-}
-
-.fa-store{
-  color: var(--num-color);
-}
-
-
 
 
 /****************** header ***************************/

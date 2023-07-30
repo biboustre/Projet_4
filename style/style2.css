@@ -1,3 +1,15 @@
+:root {
+  --logo-color: black;
+  --num-color: #9356dc;
+  --location-color: #eaeaea;
+  --bg-accueil: #f6f6f6;
+  --bg-new: #99e2d0;
+  --bg-footer: #353535;
+  --bg-case: #008766;
+  --icon-fonctionnement: #7E7E7E;
+  --bg-blocs: white;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,8 +21,6 @@ body {
   font-family: roboto;
   position: relative;
 }
-
-
 
 header {
   padding: 14px 89px 13px 89px;
@@ -140,7 +150,8 @@ footer .info-footer {
 footer .info-footer p {
   margin-top: 8px;
 }
-footer .info-footer .p-num-1, footer .info-footer .p-num-1 > p {
+footer .info-footer .p-num-1,
+footer .info-footer .p-num-1 > p {
   margin-top: 0;
 }
 footer .info-footer .p-num-1 {
