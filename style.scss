@@ -21,20 +21,9 @@ body {
   --bg-footer: #353535;
   --bg-case:  #008766;
   --icon-fonctionnement: #7E7E7E;
+  --bg-blocs: white;
 }
 
-
-.fa-regular{
-  color: var(--logo-color);
-}
-
-.fa-mobile-screen-button, .fa-list-ul {
-  color: var(--icon-fonctionnement);
-}
-
-.fa-store{
-  color: var(--num-color);
-}
 
 
 
@@ -69,6 +58,18 @@ body {
 
 
 
+
+.fa-regular{
+  color: var(--logo-color);
+}
+
+.fa-mobile-screen-button, .fa-list-ul {
+  color: var(--icon-fonctionnement);
+}
+
+.fa-store{
+  color: var(--num-color);
+}
 
 
 

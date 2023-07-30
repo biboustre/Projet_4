@@ -10,17 +10,7 @@ body {
   position: relative;
 }
 
-:root {
-  --logo-color: black;
-  --num-color: #9356dc;
-  --location-color: #eaeaea;
-  --bg-accueil: #f6f6f6;
-  --bg-new: #99e2d0;
-  --bg-footer: #353535;
-  --bg-case: #008766;
-  --icon-fonctionnement: #7E7E7E;
-  --bg-blocs: white;
-}
+
 
 header {
   padding: 14px 89px 13px 89px;

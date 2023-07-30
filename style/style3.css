@@ -1,15 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  height: 100%;
-  font-family: roboto;
-  position: relative;
-}
-
 :root {
   --logo-color: black;
   --num-color: #9356dc;
@@ -20,6 +8,18 @@ body {
   --bg-case: #008766;
   --icon-fonctionnement: #7E7E7E;
   --bg-blocs: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  font-family: roboto;
+  position: relative;
 }
 
 header {
@@ -150,7 +150,8 @@ footer .info-footer {
 footer .info-footer p {
   margin-top: 8px;
 }
-footer .info-footer .p-num-1, footer .info-footer .p-num-1 > p {
+footer .info-footer .p-num-1,
+footer .info-footer .p-num-1 > p {
   margin-top: 0;
 }
 footer .info-footer .p-num-1 {
