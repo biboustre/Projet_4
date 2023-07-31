@@ -229,6 +229,9 @@ header .header-logo svg {
   right: 25px;
   bottom: 33px;
 }
+.select-restaurants .images-restaurants .heart i {
+  font-size: 22px;
+}
 
 footer {
   padding: 22px 25px 22px 25px;
