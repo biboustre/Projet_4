@@ -249,17 +249,19 @@ header {
           border-radius: 15px;
           margin-bottom: 18px;
 
-                & > a > h2 {
-                  font-size: 18px;
-                  margin-left: 13px;
-                  margin-top: 14px;
-                }
+                
+
+                //  & > a > h2 {
+                //    font-size: 18px;
+                //    margin-left: 13px;
+                //    margin-top: 14px;
+                //  }
               
-                & > a > p {
-                  font-size: 17px;
-                  margin-left: 13px;
-                  font-weight: 300;
-                }
+                // & > a > p {
+                //   font-size: 17px;
+                //   margin-left: 13px;
+                //   font-weight: 300;
+                // }
               
                 & > a > .case{
                   position: absolute;
@@ -286,19 +288,50 @@ header {
                   width: 340px;
                 }
 
-                .heart{
-                  display: block;
-                  position: absolute;
-                  width: 22px;
-                  height: 21px;
-                  right: 25px;
-                  bottom: 33px;
+                .info-text{
+                  display: flex;
+                  justify-content: space-between;
 
+                      & .heart{
+                        margin-right: 25px;
+                        margin-top: 19px;
 
-                      i{             
-                        font-size: 22px;
+                            i{
+                              font-size: 25px;
+                            }
+                      }
+
+                      h2{
+                        font-size: 18px;
+                        margin-left: 13px;
+                        margin-top: 14px;
+                      }
+
+                      p{
+                        font-size: 17px;
+                        margin-left: 13px;
+                        font-weight: 300;
                       }
                 }
+
+                // .heart{
+                //   display: block;
+                //   position: absolute;
+                //   width: 22px;
+                //   height: 21px;
+                //   right: 25px;
+                //   bottom: 33px;
+
+
+                //       i{        
+                //         position: relative;     
+                //         font-size: 22px;
+                //         background: rebeccapurple;
+                //         // overflow: hidden;
+                //       }
+
+                      
+                // }
                 
         }
 

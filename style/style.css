@@ -188,16 +188,6 @@ header .header-logo svg {
   border-radius: 15px;
   margin-bottom: 18px;
 }
-.select-restaurants .images-restaurants > a > h2 {
-  font-size: 18px;
-  margin-left: 13px;
-  margin-top: 14px;
-}
-.select-restaurants .images-restaurants > a > p {
-  font-size: 17px;
-  margin-left: 13px;
-  font-weight: 300;
-}
 .select-restaurants .images-restaurants > a > .case {
   position: absolute;
   padding: 7px 9px 7px 9px;
@@ -221,16 +211,26 @@ header .header-logo svg {
   height: 175px;
   width: 340px;
 }
-.select-restaurants .images-restaurants .heart {
-  display: block;
-  position: absolute;
-  width: 22px;
-  height: 21px;
-  right: 25px;
-  bottom: 33px;
+.select-restaurants .images-restaurants .info-text {
+  display: flex;
+  justify-content: space-between;
 }
-.select-restaurants .images-restaurants .heart i {
-  font-size: 22px;
+.select-restaurants .images-restaurants .info-text .heart {
+  margin-right: 25px;
+  margin-top: 19px;
+}
+.select-restaurants .images-restaurants .info-text .heart i {
+  font-size: 25px;
+}
+.select-restaurants .images-restaurants .info-text h2 {
+  font-size: 18px;
+  margin-left: 13px;
+  margin-top: 14px;
+}
+.select-restaurants .images-restaurants .info-text p {
+  font-size: 17px;
+  margin-left: 13px;
+  font-weight: 300;
 }
 
 footer {
