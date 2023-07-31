@@ -22,9 +22,8 @@ body {
   --bg-case:  #008766;
   --icon-fonctionnement: #7E7E7E;
   --bg-blocs: white;
+  --bg-icon: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
 }
-
-
 
 
 
@@ -249,6 +248,13 @@ header {
           border-radius: 15px;
           margin-bottom: 18px;
 
+          & a {
+            display:block;
+            height: 251px;
+            text-decoration: none;
+            color: var(--logo-color);
+          }
+
                 
 
                 //  & > a > h2 {
@@ -275,10 +281,7 @@ header {
                   border-radius: 2px;
                 }
 
-                a {
-                  text-decoration: none;
-                  color: var(--logo-color);
-                }
+                
 
                 img {
                   align-self: flex-start;
@@ -292,14 +295,57 @@ header {
                   display: flex;
                   justify-content: space-between;
 
-                      & .heart{
+                      .heart{
                         margin-right: 25px;
                         margin-top: 19px;
+                        position: relative;
+                        display: flex;
+                        justify-content: center;
+
+                          & .vide{
+                            position: absolute;
+                          }
+
+                          & .full{
+                            position: absolute;
+                            opacity: 0;
+                            background: var(--bg-icon);
+                            background-clip: text;
+                            color: transparent;
+                            transition: all 400ms;
+                          }
+
+                          & .full:hover{
+                            opacity: 1;
+                          }
+
+                          & .vide:hover{
+                            opacity: 0;
+                          }
+
 
                             i{
                               font-size: 25px;
                             }
                       }
+
+                      // .heart::before{
+                      //   content: '';
+                      //   position: absolute;
+                      //   top: 25.33px;
+                      //   left: 0;
+                      //   width: 100%;
+                      //   height: 100%;
+                      //   background: var(--bg-icon);
+                      //   border-radius: 30% 30% 0 0;
+                      //   transition: all .5s;
+                      //   z-index: -1;
+                      // }
+
+                      // .heart:hover:before{
+                      //   top: 0;
+                      // }
+
 
                       h2{
                         font-size: 18px;
@@ -373,6 +419,11 @@ footer {
             display: flex;
             align-items: end;
             gap: 5px;
+          }
+
+          a{
+            text-decoration: none;
+            color: var(--bg-accueil);
           }
   }
 }
