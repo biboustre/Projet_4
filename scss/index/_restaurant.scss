@@ -1,0 +1,119 @@
+.select-restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 68px;
+    background-color: $location-color;
+  
+          h1 {
+            align-self: flex-start;
+            margin: 68px 0 20px 20px;
+          }
+  
+          .images-restaurants {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            height: 251px;
+            width: 340px;
+            background-color: $bg-accueil;
+            border-radius: 15px;
+            margin-bottom: 18px;
+  
+            & a {
+              display:block;
+              height: 251px;
+              text-decoration: none;
+              color: $logo-color;
+            }
+  
+                  
+  
+                  //  & > a > h2 {
+                  //    font-size: 18px;
+                  //    margin-left: 13px;
+                  //    margin-top: 14px;
+                  //  }
+                
+                  // & > a > p {
+                  //   font-size: 17px;
+                  //   margin-left: 13px;
+                  //   font-weight: 300;
+                  // }
+                
+                  & > a > .case{
+                    position: absolute;
+                    padding: 7px 9px 7px 9px;
+                    background-color: $bg-new;
+                    right: 12px;
+                    top: 13px;
+                    color: $bg-case;
+                    font-size: 14px;
+                    font-weight: 500;
+                    border-radius: 2px;
+                  }
+  
+                  
+                  img {
+                    align-self: flex-start;
+                    object-fit: cover;
+                    border-radius: 15px 15px 0 0;
+                    height: 175px;
+                    width: 340px;
+                  }
+  
+                  .info-text{
+                    display: flex;
+                    justify-content: space-between;
+  
+                        .heart{
+                          margin-right: 25px;
+                          margin-top: 19px;
+                          position: relative;
+                          display: flex;
+                          justify-content: center;
+  
+                            & .vide{
+                              position: absolute;
+                            }
+  
+                            & .full{
+                              position: absolute;
+                              opacity: 0;
+                              background: $bg-icon;
+                              background-clip: text;
+                              color: transparent;
+                              transition: all 400ms;
+                            }
+  
+                            & .full:hover{
+                              opacity: 1;
+                            }
+  
+                            & .vide:hover{
+                              opacity: 0;
+                            }
+  
+  
+                              i{
+                                font-size: 25px;
+                              }
+                        }
+
+  
+                        h2{
+                          font-size: 18px;
+                          margin-left: 13px;
+                          margin-top: 14px;
+                        }
+  
+                        p{
+                          font-size: 17px;
+                          margin-left: 13px;
+                          font-weight: 300;
+                        }
+                  }
+                 
+          }
+          
+  }
