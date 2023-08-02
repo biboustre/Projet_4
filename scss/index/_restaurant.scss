@@ -1,4 +1,4 @@
-.select-restaurants {
+#select-restaurants {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,8 +6,9 @@
     background-color: $location-color;
   
           h1 {
+            width: 340px;
             align-self: flex-start;
-            margin: 68px 0 20px 20px;
+            margin: 68px auto 20px auto;
           }
   
           .images-restaurants {
