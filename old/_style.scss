@@ -318,11 +318,11 @@ header {
                             transition: all 400ms;
                           }
 
-                          & .full:hover{
+                          & .full:active{
                             opacity: 1;
                           }
 
-                          & .vide:hover{
+                          & .vide:active{
                             opacity: 0;
                           }
 

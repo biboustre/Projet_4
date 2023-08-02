@@ -4,31 +4,59 @@ body {
     position: relative;
   }
   
+
+  /****************** EN-TETE ****************/
   header {
     padding: 14px 89px 13px 89px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  
-    .header-logo {
-      text-align: center;
-  
-      svg {
-        height: 36px;
-        width: 162px;
-      }
+    position: relative;
+
+    .header_icon{
+      display: flex;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 17px;
+      text-decoration: none;
+      color: $logo-color;
+      height: 30px;
+      width: 30px;
+
+
+          i{
+            font-size: 20px;
+            margin: auto;
+          }
     }
-  }
   
+      .header-logo {
+        text-align: center;
+  
+          svg {
+            height: 36px;
+            width: 162px;
+          }
+
+      }
+  }
+
+
+
+  /************* IMAGE PRIMCIPALE ****************/
   .image-principale {
     width: 100%;
     height: 275px;
   
-    img {
-      object-fit: cover;
-      height: 100%;
-      width: 100%;
-    }
+        img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%;
+        }
   }
-  
+
+
+
+  /************* CARTES DES RESTAURANTS ****************/
   .carte-restaurant {
     width: 100%;
     background-color: $bg-accueil;
@@ -37,65 +65,91 @@ body {
     z-index: 1;
     top: 300px;
   
-    .title-carte {
-      font-size: 28px;
-      font-weight: 400;
-      font-family: shrikhand;
-      margin-bottom: 40px;
-      margin-left: 13px;
-      margin-top: 32px;
-    }
-  
-    .cartes {
-      width: 349px;
-      margin: auto;
-      margin-bottom: 40px;
-  
-      .line-and-title-carte {
-        width: 275px;
-  
-        .title-menu {
-          font-size: 16px;
-          font-weight: 300;
-          margin-bottom: 5px;
-        }
-  
-        hr {
-          width: 40px;
-          border: none;
-          height: 3px;
-          background-color: $bg-new;
-        }
-      }
-  
-      .blocs {
-        padding: 15px;
-        background-color: $bg-blocs;
-        border-radius: 15.043px;
-        margin-top: 12px;
-  
-        .prix {
-          display: flex;
-          justify-content: space-between;
-  
-          strong {
-            font-size: 15.043px;
+          .title-carte {
+          width: 349px;
+            font-size: 28px;
+            font-weight: 400;
+            font-family: shrikhand;
+            margin: 32px auto 40px auto;
           }
-        }
+        
+          .cartes {
+            width: 349px;
+            margin: auto;
+            margin-bottom: 40px;
   
-        h3 {
-          font-weight: 500;
-        }
-  
-        p {
-          font-size: 15.043px;
-          font-weight: 300;
-        }
-      }
+                  .line-and-title-carte {
+                    width: 275px;
+                  
+                    .title-menu {
+                      font-size: 16px;
+                      font-weight: 300;
+                      margin-bottom: 5px;
+                    }
+                  
+                    hr {
+                      width: 40px;
+                      border: none;
+                      height: 3px;
+                      background-color: $bg-new;
+                    }
+                  }
+
+
+                  .blocs::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: -80px;
+                    width: 80px;
+                    height: 100%;
+                    background-color: $bg-new;
+                    border-radius: 0 15.043px 15.043px 0;
+                    transition: all ease-out 400ms;
+                  }
+                
+                  .blocs:hover:after{
+                    right: 0;
+                  }
+
+                
+                  .blocs {
+                    position: relative;
+                    overflow: hidden;
+                    padding: 15px;
+                    background-color: $bg-blocs;
+                    border-radius: 15.043px;
+                    margin-top: 12px;
+                    cursor: pointer;
+                  
+                  
+                            .prix {
+                              display: flex;
+                              justify-content: space-between;
+                              position: relative;
+                              z-index: 1;
+                            
+                              strong {
+                                font-size: 15.043px;
+                              }
+                            }
+                          
+                            h3 {
+                              font-weight: 500;
+                            }
+                          
+                            p {
+                              font-size: 15.043px;
+                              font-weight: 300;
+                            }
+                  }
     }
   }
   
-  .carte-plats {
+  
+
+
+  /************* TRAIT BLEU ****************/
     .line-and-plat {
       width: 275px;
   
@@ -112,8 +166,10 @@ body {
         margin-bottom: 5px;
       }
     }
-  }
-  
+
+
+
+  /************* BOUTON "COMMANDER" ****************/
   .btn {
     @include flexMid();
     margin: auto;
@@ -127,7 +183,10 @@ body {
     border: none;
     color: $bg-blocs;
   }
-  
+
+
+
+  /************* PIED DE PAGE ****************/
   footer {
     top: 1450px;
     z-index: 2;
@@ -136,32 +195,32 @@ body {
     padding: 22px 25px 22px 25px;
     background-color: $bg-footer;
   
-    .logo-footer > img {
-      width: 100px;
-      margin-bottom: 16px;
-    }
+            .logo-footer > img {
+              width: 100px;
+              margin-bottom: 16px;
+            }
+          
+            .info-footer {
+              color: $bg-accueil;
   
-    .info-footer {
-      color: $bg-accueil;
-  
-      p {
-        margin-top: 8px;
-      }
-  
-      .p-num-1,
-      .p-num-1 > p {
-        margin-top: 0;
-      }
-  
-      .p-num-1 {
-        display: flex;
-        gap: 11px;
-      }
-  
-      .p-num-2 {
-        display: flex;
-        align-items: end;
-        gap: 5px;
-      }
-    }
+                    p {
+                      margin-top: 8px;
+                    }
+                  
+                    .p-num-1,
+                    .p-num-1 > p {
+                      margin-top: 0;
+                    }
+                  
+                    .p-num-1 {
+                      display: flex;
+                      gap: 11px;
+                    }
+                  
+                    .p-num-2 {
+                      display: flex;
+                      align-items: end;
+                      gap: 5px;
+                    }
+              }
   }
