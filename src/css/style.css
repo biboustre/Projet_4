@@ -101,12 +101,15 @@ header .header-logo svg {
 }
 
 .fonctionnement {
-  margin-top: 48px;
-  margin-bottom: 68px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .fonctionnement .fonctionnement, .fonctionnement h1 {
-  margin: 0 auto 30px auto;
   width: 322.486px;
+  margin-bottom: 25px;
+  align-self: center;
 }
 .fonctionnement .les-choix {
   display: flex;
@@ -150,6 +153,22 @@ header .header-logo svg {
   color: #f6f6f6;
 }
 
+/****************** MEDIA QUERIES **********************/
+@media (min-width: 1080px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: column;
+    padding: 0 180px;
+  }
+  .fonctionnement .les-choix {
+    flex-direction: row;
+    justify-content: start;
+    margin-left: 15px;
+  }
+  .fonctionnement h1 {
+    align-self: flex-start;
+  }
+}
 #select-restaurants {
   display: flex;
   flex-direction: column;
@@ -159,8 +178,8 @@ header .header-logo svg {
 }
 #select-restaurants h1 {
   width: 340px;
-  align-self: flex-start;
-  margin: 68px auto 20px auto;
+  align-self: center;
+  margin: 68px 0 20px;
 }
 #select-restaurants .images-restaurants {
   display: flex;
@@ -240,6 +259,25 @@ header .header-logo svg {
   font-weight: 300;
 }
 
+@media (min-width: 1080px) {
+  #select-restaurants {
+    padding: 0 180px 0 180px;
+  }
+  #select-restaurants h1 {
+    align-self: start;
+  }
+  #select-restaurants .images-select-restaurants {
+    display: flex;
+    gap: 50px 10%;
+    flex-wrap: wrap;
+  }
+  #select-restaurants .images-restaurants {
+    width: 45%;
+  }
+  #select-restaurants .images-restaurants img {
+    width: 100%;
+  }
+}
 footer {
   padding: 22px 25px 22px 25px;
   background-color: #353535;
@@ -269,4 +307,29 @@ footer .info-footer .p-num-2 {
 footer .info-footer a {
   text-decoration: none;
   color: #f6f6f6;
+}
+
+@media (min-width: 1080px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 80px;
+    height: 114px;
+  }
+  footer .logo-footer {
+    display: flex;
+    align-items: end;
+    margin-right: 50px;
+  }
+  footer .logo-footer img {
+    height: 20px;
+    margin-bottom: 0;
+  }
+  footer .info-footer {
+    display: flex;
+    align-items: end;
+  }
+  footer .info-footer p, footer .info-footer a {
+    margin-right: 30px;
+  }
 }/*# sourceMappingURL=style.css.map */

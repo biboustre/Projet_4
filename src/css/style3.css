@@ -179,6 +179,7 @@ header .header-logo svg {
   background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 /************* PIED DE PAGE ****************/
@@ -214,6 +215,51 @@ footer .info-footer .p-num-2 {
   gap: 5px;
 }
 
+@media (min-width: 1080px) {
+  .carte-restaurant {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+  }
+  .carte-restaurant .title-carte {
+    margin-left: 20%;
+  }
+  .carte-restaurant .cartes {
+    width: auto;
+  }
+  .carte-restaurant .cartes .blocs {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .carte-restaurant .cartes .line-and-title-carte {
+    margin-left: 20%;
+  }
+  /******************** PIED DE PAGE *********************/
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 80px;
+    height: 114px;
+  }
+  footer .logo-footer {
+    display: flex;
+    align-items: end;
+    margin-right: 50px;
+  }
+  footer .logo-footer img {
+    height: 20px;
+    margin-bottom: 0;
+  }
+  footer .info-footer {
+    display: flex;
+    align-items: end;
+  }
+  footer .info-footer p, footer .info-footer a {
+    margin-right: 30px;
+  }
+}
 footer {
   top: 1534px;
   z-index: 2;

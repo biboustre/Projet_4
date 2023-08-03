@@ -66,7 +66,7 @@ body {
     top: 300px;
   
           .title-carte {
-          width: 349px;
+            width: 349px;
             font-size: 28px;
             font-weight: 400;
             font-family: shrikhand;
@@ -182,6 +182,7 @@ body {
     background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
     border: none;
     color: $bg-blocs;
+    cursor: pointer;
   }
 
 
@@ -224,3 +225,66 @@ body {
                     }
               }
   }
+
+ 
+ @media (min-width: 1080px){
+.carte-restaurant{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+
+        .title-carte{
+          margin-left: 20%;
+        }
+        .cartes{
+          width: auto;
+        
+          .blocs{
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        
+          .line-and-title-carte{
+            margin-left: 20%;
+          }
+              
+        }
+}
+
+
+/******************** PIED DE PAGE *********************/
+
+
+
+      footer{
+          display: flex;
+          flex-direction: row-reverse;
+          gap: 80px;
+          height: 114px;
+
+            .logo-footer{
+              display: flex;
+              align-items: end;
+              margin-right: 50px;
+
+                  & img{
+                    height: 20px;
+                    margin-bottom: 0;
+                  }
+
+            }
+          
+
+            .info-footer{
+              display: flex;
+              align-items: end;
+
+                & p, a{
+                  margin-right: 30px;
+                }
+
+              }
+      }  
+}

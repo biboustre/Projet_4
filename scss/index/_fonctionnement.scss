@@ -1,10 +1,13 @@
 .fonctionnement {
-    margin-top: 48px;
-    margin-bottom: 68px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
   
         .fonctionnement, h1 {
-          margin: 0 auto 30px auto;
           width: 322.486px; 
+          margin-bottom: 25px;
+          align-self: center;
         }
       
         .les-choix {
@@ -46,4 +49,28 @@
                 }
               }
     }
+  }
+
+
+  /****************** MEDIA QUERIES **********************/
+  @media (min-width: 1080px){
+
+    .fonctionnement{
+      display: flex;
+      flex-direction: column;
+      padding: 0 180px;
+
+          .les-choix{
+            flex-direction: row;
+            justify-content: start;
+            margin-left: 15px;
+          }
+
+          h1{
+            align-self: flex-start;
+          }
+    }
+
+    
+    
   }

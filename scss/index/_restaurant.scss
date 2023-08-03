@@ -7,8 +7,8 @@
   
           h1 {
             width: 340px;
-            align-self: flex-start;
-            margin: 68px auto 20px auto;
+            align-self: center;
+            margin: 68px 0 20px;
           }
   
           .images-restaurants {
@@ -116,5 +116,32 @@
                   }
                  
           }
-          
+            
+  }
+
+
+  @media (min-width: 1080px){
+    #select-restaurants{
+      padding: 0 180px 0 180px;
+
+
+        h1{
+          align-self: start;
+        }
+
+
+        .images-select-restaurants{
+          display: flex;
+          gap: 50px 10%;
+          flex-wrap: wrap;
+        }
+
+            .images-restaurants{
+              width: 45%;
+
+                img{
+                  width: 100%;
+                }
+            }
+    }
   }
