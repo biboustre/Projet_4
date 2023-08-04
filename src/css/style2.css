@@ -113,13 +113,14 @@ header .header-logo svg {
   position: absolute;
   top: 0;
   right: -80px;
-  width: 80px;
+  width: 60px;
   height: 100%;
   background-color: #99e2d0;
+  background-image: url("/images/Select-button.png");
   border-radius: 0 15.043px 15.043px 0;
   transition: all ease-out 400ms;
 }
-.carte-restaurant .cartes .blocs:hover:after {
+.carte-restaurant .cartes .blocs:active:after {
   right: 0;
 }
 .carte-restaurant .cartes .blocs {
@@ -180,6 +181,12 @@ header .header-logo svg {
   border: none;
   color: white;
   cursor: pointer;
+}
+.btn.btn:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(272deg, #9356DC 0%, #FF79DA 100%);
+  box-shadow: 1px 1px 20px 7px rgb(222, 219, 219);
+  transition: all ease-out 300ms;
+  color: rgba(255, 255, 255, 0.872);
 }
 
 /************* PIED DE PAGE ****************/

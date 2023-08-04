@@ -1,6 +1,6 @@
 .adresse {
     position: relative;
-    background-color: var(--location-color);
+    background-color: $location-color;
     height: 50px;
 
     .localisation{

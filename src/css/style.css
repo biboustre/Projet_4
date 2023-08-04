@@ -28,7 +28,7 @@ header .header-logo svg {
 
 .adresse {
   position: relative;
-  background-color: var(--location-color);
+  background-color: #eaeaea;
   height: 50px;
 }
 .adresse .localisation {
@@ -98,6 +98,7 @@ header .header-logo svg {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(272deg, #9356DC 0%, #FF79DA 100%);
   box-shadow: 1px 1px 20px 7px rgb(222, 219, 219);
   transition: all ease-out 300ms;
+  color: rgba(255, 255, 255, 0.872);
 }
 
 .fonctionnement {
@@ -158,15 +159,15 @@ header .header-logo svg {
   .fonctionnement {
     display: flex;
     flex-direction: column;
-    padding: 0 180px;
+    align-items: center;
+    padding: 0;
   }
   .fonctionnement .les-choix {
     flex-direction: row;
-    justify-content: start;
-    margin-left: 15px;
+    justify-content: center;
   }
   .fonctionnement h1 {
-    align-self: flex-start;
+    margin-left: -720px;
   }
 }
 #select-restaurants {
@@ -261,6 +262,7 @@ header .header-logo svg {
 
 @media (min-width: 1080px) {
   #select-restaurants {
+    display: flex;
     padding: 0 180px 0 180px;
   }
   #select-restaurants h1 {
