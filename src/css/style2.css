@@ -10,8 +10,62 @@ body {
   margin: 0;
   padding: 0;
   font-family: roboto;
+  position: relative;
 }
 
+.contenu {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.loader {
+  position: absolute;
+  background: linear-gradient(to right, #a83279, rgba(211, 130, 18, 0.7333333333));
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s ease-in-out;
+  animation: disparition 3s;
+  opacity: 0;
+}
+
+.dot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+  margin: 0 15px;
+  animation: loader infinite 0.3s alternate;
+}
+
+.d2 {
+  animation-delay: 0.05s;
+}
+
+.d3 {
+  animation-delay: 0.1s;
+}
+
+@keyframes loader {
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@keyframes disparition {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 header {
   padding: 14px 89px 13px 89px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -89,10 +143,25 @@ header .header-logo svg {
   font-family: shrikhand;
   margin: 32px auto 40px auto;
 }
+.carte-restaurant .carte1 {
+  animation: flash 0.9s ease-in-out 0.2s;
+  animation-fill-mode: both;
+}
+.carte-restaurant .carte2 {
+  animation: flash 0.9s ease-in-out 0.5s;
+  animation-fill-mode: both;
+}
+.carte-restaurant .carte3 {
+  animation: flash 0.9s ease-in-out 0.8s;
+  animation-fill-mode: both;
+}
 .carte-restaurant .cartes {
   width: 349px;
   margin: auto;
   margin-bottom: 40px;
+}
+.carte-restaurant .cartes .txt, .carte-restaurant .cartes p {
+  text-overflow: ellipsis;
 }
 .carte-restaurant .cartes .line-and-title-carte {
   width: 275px;
@@ -108,45 +177,62 @@ header .header-logo svg {
   height: 3px;
   background-color: #99e2d0;
 }
-.carte-restaurant .cartes .blocs::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -80px;
-  width: 60px;
-  height: 100%;
-  background-color: #99e2d0;
-  background-image: url("/images/Select-button.png");
-  border-radius: 0 15.043px 15.043px 0;
-  transition: all ease-out 400ms;
-}
-.carte-restaurant .cartes .blocs:active:after {
-  right: 0;
-}
 .carte-restaurant .cartes .blocs {
-  position: relative;
-  overflow: hidden;
-  padding: 15px;
+  display: block;
+  color: black;
+  padding-right: 0;
   background-color: white;
   border-radius: 15.043px;
   margin-top: 12px;
   cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
 }
-.carte-restaurant .cartes .blocs .prix {
+.carte-restaurant .cartes .blocs .contenu-blocs {
   display: flex;
   justify-content: space-between;
-  position: relative;
-  z-index: 1;
+  padding: 15px;
+  width: 100%;
+  height: 100%;
 }
-.carte-restaurant .cartes .blocs .prix strong {
-  font-size: 15.043px;
-}
-.carte-restaurant .cartes .blocs h3 {
+.carte-restaurant .cartes .blocs .contenu-blocs h3 {
   font-weight: 500;
 }
-.carte-restaurant .cartes .blocs p {
+.carte-restaurant .cartes .blocs .contenu-blocs p {
   font-size: 15.043px;
   font-weight: 300;
+}
+.carte-restaurant .cartes .blocs .contenu-blocs .prix-check {
+  display: flex;
+  position: absolute;
+  right: -59px;
+  top: 0;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+}
+.carte-restaurant .cartes .blocs .contenu-blocs .prix-check strong {
+  font-size: 15.043px;
+  margin-top: 37px;
+  padding-right: 15px;
+}
+.carte-restaurant .cartes .blocs .contenu-blocs .prix-check .check {
+  border-radius: 0 15.043px 15.043px 0;
+  width: 59px;
+  height: 100%;
+  background-color: #99e2d0;
+  background-image: url("/images/Select-button.png");
+}
+@keyframes flash {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+.carte-restaurant .cartes .blocs:hover .prix-check {
+  right: 0;
 }
 
 /************* TRAIT BLEU ****************/

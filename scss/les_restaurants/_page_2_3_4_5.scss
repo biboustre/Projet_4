@@ -73,10 +73,28 @@ body {
             margin: 32px auto 40px auto;
           }
         
+          .carte1{
+            animation: flash 0.9s ease-in-out 0.2s ;
+            animation-fill-mode: both;
+          }
+          .carte2{
+            animation: flash 0.9s ease-in-out 0.5s ;
+            animation-fill-mode: both;
+          }
+          .carte3{
+            animation: flash 0.9s ease-in-out 0.8s ;
+            animation-fill-mode: both;
+          }
+
           .cartes {
             width: 349px;
             margin: auto;
             margin-bottom: 40px;
+            
+
+                  .txt, p{
+                    text-overflow: ellipsis;
+                  }
   
                   .line-and-title-carte {
                     width: 275px;
@@ -96,45 +114,28 @@ body {
                   }
 
 
-                  .blocs::after{
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: -80px;
-                    width: 60px;
-                    height: 100%;
-                    background-color: $bg-new;
-                    background-image: url('/images/Select-button.png');
-                    border-radius: 0 15.043px 15.043px 0;
-                    transition: all ease-out 400ms;
-                  }
 
-                  .blocs:active:after{
-                    right: 0;
-                  }
-                
-                
                   .blocs {
-                    position: relative;
-                    overflow: hidden;
-                    padding: 15px;
+                    display: block;
+                    color: $logo-color;
+                    padding-right: 0;
                     background-color: $bg-blocs;
                     border-radius: 15.043px;
                     margin-top: 12px;
-                    cursor: pointer;
-                  
-                  
-                            .prix {
-                              display: flex;
-                              justify-content: space-between;
-                              position: relative;
-                              z-index: 1;
-                            
-                              strong {
-                                font-size: 15.043px;
-                              }
-                            }
-                          
+                    cursor: pointer; 
+                    text-decoration: none;
+                    position: relative;
+                    overflow: hidden;
+
+
+
+                      .contenu-blocs {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 15px;
+                        width: 100%;
+                        height: 100%;
+
                             h3 {
                               font-weight: 500;
                             }
@@ -143,8 +144,49 @@ body {
                               font-size: 15.043px;
                               font-weight: 300;
                             }
+
+
+                            .prix-check{
+                              display: flex;
+                              position: absolute;
+                              right:-59px;
+                              top: 0;
+                              height: 100%;
+                              transition:  0.3s ease-in-out;
+
+                                  strong {
+                                        font-size: 15.043px;
+                                        margin-top:  37px;
+                                        padding-right: 15px;
+                                      }
+                                    
+                                  .check{
+                                     border-radius: 0 15.043px 15.043px 0;
+                                     width: 59px;
+                                     height: 100%;
+                                     background-color: $bg-new;
+                                     background-image: url('/images/Select-button.png');
+                                  }
+
+                            }
+                      
+                            @keyframes flash{
+                              0%{
+                                scale: (0);
+                              }
+                            
+                              
+                              100%{
+                                scale: (1);
+                              }
+                            }                                                                                           
+                      }                        
                   }
-    }
+
+                  .blocs:hover .prix-check{
+                    right: 0;
+                  }
+          }                  
   }
   
   
