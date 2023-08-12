@@ -91,10 +91,18 @@ body {
             margin: auto;
             margin-bottom: 40px;
             
-
-                  .txt, p{
-                    text-overflow: ellipsis;
+                  .txt{
+                    padding: 15px 0 15px 15px;
+                    overflow: hidden;
                   }
+
+                  .txt > h3, p{
+                    white-space: nowrap;
+                    text-overflow: ellipsis;                   
+                    overflow: hidden;
+                  }                  
+
+                  
   
                   .line-and-title-carte {
                     width: 275px;
@@ -132,7 +140,6 @@ body {
                       .contenu-blocs {
                         display: flex;
                         justify-content: space-between;
-                        padding: 15px;
                         width: 100%;
                         height: 100%;
 
@@ -146,36 +153,32 @@ body {
                             }
 
 
-                            .prix-check{
+                            .prix{
                               display: flex;
-                              position: absolute;
-                              right:-59px;
-                              top: 0;
-                              height: 100%;
-                              transition:  0.3s ease-in-out;
+                              align-items: end;
 
-                                  strong {
-                                        font-size: 15.043px;
-                                        margin-top:  37px;
-                                        padding-right: 15px;
-                                      }
-                                    
-                                  .check{
-                                     border-radius: 0 15.043px 15.043px 0;
-                                     width: 59px;
-                                     height: 100%;
-                                     background-color: $bg-new;
-                                     background-image: url('/images/Select-button.png');
-                                  }
-
+                                p{
+                                  font-weight: bold;
+                                  padding-bottom: 15px;
+                                  padding-right: 15px;
+                                }
                             }
+
+                            .prix::after{
+                              content: "";
+                              width: 59px;
+                              height: 100%;
+                              margin-right: -59px;
+                              background-image: url('/images/Select-button.png');
+                              transition:  0.3s ease-in-out;
+                            }
+
                       
                             @keyframes flash{
                               0%{
                                 scale: (0);
                               }
-                            
-                              
+                                                         
                               100%{
                                 scale: (1);
                               }
@@ -183,9 +186,12 @@ body {
                       }                        
                   }
 
-                  .blocs:hover .prix-check{
-                    right: 0;
+                  .blocs:hover .prix::after{
+                    margin-right: 0;
                   }
+                  
+                  
+                  
           }                  
   }
   
