@@ -64,14 +64,56 @@ body {
     position: absolute;
     z-index: 1;
     top: 300px;
-  
-          .title-carte {
-            width: 349px;
-            font-size: 28px;
-            font-weight: 400;
-            font-family: shrikhand;
-            margin: 32px auto 40px auto;
-          }
+
+
+
+        .title_and_heart{
+          display: flex;
+          width: 349px;
+          margin: 32px auto 40px auto;
+
+
+            .title-carte{
+               font-size: 28px;
+               font-weight: 400;
+               font-family: shrikhand;
+            }
+
+
+            .heart{
+               position: relative;
+               padding-left: 34px;
+
+                 & .vide{
+                   position: absolute;
+                 }
+
+                 & .full{
+                   opacity: 0;
+                   background: $bg-icon;
+                   background-clip: text;
+                   color: transparent;
+                   transition: all 400ms;
+                 }
+
+                 & .full:hover{
+                   opacity: 1;
+                 }
+
+                 & .vide:hover{
+                   opacity: 0;
+                 }
+
+                 i{
+                   font-size: 27px;
+                   padding-top: 6px;
+                 }
+                
+             }
+        }
+
+    
+          
         
           .carte1{
             animation: flash 0.9s ease-in-out 0.2s ;
@@ -103,7 +145,6 @@ body {
                   }                  
 
                   
-  
                   .line-and-title-carte {
                     width: 275px;
                   
@@ -170,6 +211,7 @@ body {
                               height: 100%;
                               margin-right: -59px;
                               background-image: url('/images/Select-button.png');
+                              background-size: cover;
                               transition:  0.3s ease-in-out;
                             }
 
@@ -255,6 +297,7 @@ body {
             .logo-footer > img {
               width: 100px;
               margin-bottom: 16px;
+              filter:invert(1);
             }
           
             .info-footer {
@@ -290,9 +333,6 @@ body {
   transform: translateX(-50%);
   width: 80%;
 
-        .title-carte{
-          margin-left: 20%;
-        }
         .cartes{
           width: auto;
         

@@ -19,53 +19,6 @@ body {
   margin: auto;
 }
 
-.loader {
-  position: absolute;
-  background: linear-gradient(to right, #a83279, rgba(211, 130, 18, 0.7333333333));
-  z-index: 200;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 1s ease-in-out;
-  animation: disparition 3s;
-  opacity: 0;
-}
-
-.dot {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
-  margin: 0 15px;
-  animation: loader infinite 0.3s alternate;
-}
-
-.d2 {
-  animation-delay: 0.05s;
-}
-
-.d3 {
-  animation-delay: 0.1s;
-}
-
-@keyframes loader {
-  100% {
-    transform: translateY(-30px);
-  }
-}
-@keyframes disparition {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 header {
   padding: 14px 89px 13px 89px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -141,6 +94,7 @@ header .header-logo svg {
   width: 100%;
   text-decoration: none;
   border-radius: 25px;
+  cursor: pointer;
 }
 .accueil .btn-accueil a p {
   margin: auto;
@@ -341,6 +295,7 @@ footer {
 footer .logo-footer > img {
   width: 100px;
   margin-bottom: 16px;
+  filter: invert(1);
 }
 footer .info-footer {
   color: #f6f6f6;

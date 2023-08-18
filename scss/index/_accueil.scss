@@ -31,8 +31,9 @@
                   a {
                     @include lienBloc();
                     border-radius: 25px;
-
-
+                    cursor: pointer;
+                    
+        
                   
                     p {
                        margin: auto;

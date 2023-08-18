@@ -19,53 +19,6 @@ body {
   margin: auto;
 }
 
-.loader {
-  position: absolute;
-  background: linear-gradient(to right, #a83279, rgba(211, 130, 18, 0.7333333333));
-  z-index: 200;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 1s ease-in-out;
-  animation: disparition 3s;
-  opacity: 0;
-}
-
-.dot {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
-  margin: 0 15px;
-  animation: loader infinite 0.3s alternate;
-}
-
-.d2 {
-  animation-delay: 0.05s;
-}
-
-.d3 {
-  animation-delay: 0.1s;
-}
-
-@keyframes loader {
-  100% {
-    transform: translateY(-30px);
-  }
-}
-@keyframes disparition {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 header {
   padding: 14px 89px 13px 89px;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -136,12 +89,40 @@ header .header-logo svg {
   z-index: 1;
   top: 300px;
 }
-.carte-restaurant .title-carte {
+.carte-restaurant .title_and_heart {
+  display: flex;
   width: 349px;
+  margin: 32px auto 40px auto;
+}
+.carte-restaurant .title_and_heart .title-carte {
   font-size: 28px;
   font-weight: 400;
   font-family: shrikhand;
-  margin: 32px auto 40px auto;
+}
+.carte-restaurant .title_and_heart .heart {
+  position: relative;
+  padding-left: 34px;
+}
+.carte-restaurant .title_and_heart .heart .vide {
+  position: absolute;
+}
+.carte-restaurant .title_and_heart .heart .full {
+  opacity: 0;
+  background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transition: all 400ms;
+}
+.carte-restaurant .title_and_heart .heart .full:hover {
+  opacity: 1;
+}
+.carte-restaurant .title_and_heart .heart .vide:hover {
+  opacity: 0;
+}
+.carte-restaurant .title_and_heart .heart i {
+  font-size: 27px;
+  padding-top: 6px;
 }
 .carte-restaurant .carte1 {
   animation: flash 0.9s ease-in-out 0.2s;
@@ -223,6 +204,7 @@ header .header-logo svg {
   height: 100%;
   margin-right: -59px;
   background-image: url("/images/Select-button.png");
+  background-size: cover;
   transition: 0.3s ease-in-out;
 }
 @keyframes flash {
@@ -289,6 +271,7 @@ footer {
 footer .logo-footer > img {
   width: 100px;
   margin-bottom: 16px;
+  filter: invert(1);
 }
 footer .info-footer {
   color: #f6f6f6;
@@ -316,9 +299,6 @@ footer .info-footer .p-num-2 {
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
-  }
-  .carte-restaurant .title-carte {
-    margin-left: 20%;
   }
   .carte-restaurant .cartes {
     width: auto;
